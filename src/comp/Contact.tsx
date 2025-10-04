@@ -1,6 +1,9 @@
 export default function Contact() {
   return (
-    <section id="contact" className="py-16 px-4 bg-brandWhite text-center">
+    <section
+      id="contact"
+      className="flex justify-center px-2 items-center h-dvh flex-col bg-brandWhite text-center"
+    >
       <h2 className="text-3xl sm:text-4xl font-pretty mb-8 text-brandGold">
         Contact Us
       </h2>
