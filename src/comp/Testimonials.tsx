@@ -58,6 +58,7 @@ export default function Testimonials() {
                       dragElastic={0.4} // more sensitive
                       onDragEnd={(e, { offset }) => {
                         // lower threshold for swipe sensitivity
+                        console.log(e);
                         if (offset.x < -50)
                           setCurrentIndex((prev) => (prev + 1) % images.length);
                         else if (offset.x > 50)
