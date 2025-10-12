@@ -42,9 +42,13 @@ export default function Navbar() {
   return (
     <nav>
       {
-        <div className="absolute top-0  left-0 w-full  shadow-md flex items-center space-y-4 ">
+        <div className="absolute top-0  left-0 w-full  flex items-center space-y-4 ">
           <BubbleMenu
-            logo={<span style={{ fontWeight: 700 }}>Klajd-Fer</span>}
+            logo={
+              <a href="/" style={{ fontWeight: 700 }}>
+                Klajd&Fer
+              </a>
+            }
             items={items}
             menuAriaLabel="Toggle navigation"
             menuBg="#ffffff"

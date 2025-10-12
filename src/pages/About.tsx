@@ -20,7 +20,7 @@ export default function About() {
       </h2>
       <p className="text-gray-700 text-sm sm:text-base">
         <SplitText
-          text=" Klajd-Fer is dedicated to creating unforgettable weddings. We handle
+          text=" Klajd&Fer is dedicated to creating unforgettable weddings. We handle
         every detail, from planning to styling, to make your special day elegant
         and magical."
           className=" font-semibold text-center"

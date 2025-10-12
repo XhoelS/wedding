@@ -3,6 +3,7 @@
 
 html {
   scroll-behavior: smooth;
+  font-family: serif;
 }
 
 @custom-variant dark (&:is(.dark *));

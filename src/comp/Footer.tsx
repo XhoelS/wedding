@@ -9,7 +9,7 @@ export default function Footer() {
         <FaTwitter className="cursor-pointer hover:text-gray-400 transition" />
       </div>
       <p className="text-sm sm:text-base">
-        &copy; {new Date().getFullYear()} Klajd-Fer. All rights reserved.
+        &copy; {new Date().getFullYear()} Klajd&Fer. All rights reserved.
       </p>
     </footer>
   );

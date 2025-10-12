@@ -3,14 +3,16 @@ import Services from "../comp/Services";
 import Gallery from "../comp/Gallery";
 import Testimonials from "../comp/Testimonials";
 import Contact from "../comp/Contact";
+import ContactPageMao from "@/comp/ContactPage";
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <Services />
-      <Gallery />
       <Testimonials />
+      <Gallery />
+      <Services />
+      <ContactPageMao />
       <Contact />
     </>
   );
