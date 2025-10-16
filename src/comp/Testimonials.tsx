@@ -1,90 +1,78 @@
-import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 const images = [
-  "/public/weddimg1.jpg",
-  "/public/weddimg2.jpg",
-  "/public/weddimg3.jpg",
-  "/public/weddimg4.jpg",
-  "/public/weddimg5.jpg",
-  "/public/weddimg6.jpg",
+  "/weddimg1.jpg",
+  "/weddimg2.jpg",
+  "/weddimg3.jpg",
+  "/weddimg4.jpg",
+  "/weddimg5.jpg",
+  "/weddimg6.jpg",
+];
+
+const texts = [
+  {
+    title: "Life cannot be perfect, but your wedding can be",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed volutpat, massa a egestas suscipit, justo erat pharetra erat, ac faucibus elit urna a metus.",
+  },
+  {
+    title: "Celebrate love in the most beautiful way",
+    desc: "Praesent vel lorem eget justo vestibulum gravida. Aenean ut orci vel ex vehicula luctus et ac odio.",
+  },
+  {
+    title: "Every moment is worth remembering",
+    desc: "Suspendisse potenti. Integer sit amet nisl non nisi congue viverra et sit amet arcu.",
+  },
+  {
+    title: "Make memories that last forever",
+    desc: "Aliquam erat volutpat. In hac habitasse platea dictumst. Curabitur eget eros sed libero ultricies faucibus.",
+  },
+  {
+    title: "Elegance meets emotion",
+    desc: "Proin quis ex ac mi mattis consectetur. Duis nec sagittis nisl. Vivamus feugiat justo at dictum hendrerit.",
+  },
+  {
+    title: "Your dream day, perfectly planned",
+    desc: "Ut vitae lacinia mi. Sed eu lectus non magna consequat aliquam. Mauris viverra velit a ex viverra, eget facilisis elit lacinia.",
+  },
 ];
 
 export default function Testimonials() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  // Auto-slide every 3 seconds
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % images.length);
-    }, 300000); // smooth and fast
-    return () => clearInterval(interval);
-  }, []);
-
   return (
-    <section className="py-16 px-4 bg-white max-w-3xl mx-auto">
-      <div className="flex flex-col md:flex-row items-center gap-8">
-        {/* Left side: Text */}
-        <div className="w-full md:w-1/2 text-gray-700 mb-6 md:mb-0">
-          <h2 className="text-2xl font-bold mb-4 font-serif">
-            Life cannot be perfect, but your wedding can be
-          </h2>
-          <p className="text-gray-600">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-            volutpat, massa a egestas suscipit, justo erat pharetra erat, ac
-            faucibus elit urna a metus. Praesent vel lorem eget justo vestibulum
-            gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </p>
-        </div>
+    <section className="py-16 bg-white">
+      <div className="max-w-6xl mx-auto flex flex-col gap-24 px-4">
+        {images.map((img, index) => {
+          const isEven = index % 2 === 0;
+          const text = texts[index];
+          return (
+            <motion.div
+              key={index}
+              className={`flex flex-col md:flex-row items-center gap-10 ${
+                isEven ? "" : "md:flex-row-reverse"
+              }`}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              {/* Image */}
+              <div className="w-full md:w-1/2">
+                <img
+                  src={img}
+                  alt={`Wedding ${index + 1}`}
+                  className="rounded-2xl shadow-lg w-full h-80 md:h-96 object-cover"
+                />
+              </div>
 
-        {/* Right side: Slider */}
-        <div className="w-full md:w-1/2 relative">
-          <div className="overflow-hidden rounded-2xl shadow-lg h-64 md:h-96 relative">
-            <AnimatePresence initial={false} mode="popLayout">
-              {images.map(
-                (img, index) =>
-                  index === currentIndex && (
-                    <motion.img
-                      key={index}
-                      src={img}
-                      alt={`Slide ${index + 1}`}
-                      className="w-full h-full object-cover absolute top-0 left-0"
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      exit={{ opacity: 0 }}
-                      transition={{ duration: 0.5 }}
-                      drag="x"
-                      dragConstraints={{ left: 0, right: 0 }}
-                      dragElastic={0.4} // more sensitive
-                      onDragEnd={(e, { offset }) => {
-                        // lower threshold for swipe sensitivity
-                        console.log(e);
-                        if (offset.x < -50)
-                          setCurrentIndex((prev) => (prev + 1) % images.length);
-                        else if (offset.x > 50)
-                          setCurrentIndex(
-                            (prev) => (prev - 1 + images.length) % images.length
-                          );
-                      }}
-                    />
-                  )
-              )}
-            </AnimatePresence>
-          </div>
-
-          {/* Dots */}
-          <div className="flex justify-center mt-4 gap-2">
-            {images.map((_, index) => (
-              <span
-                key={index}
-                className={`w-3 h-3 rounded-full ${
-                  index === currentIndex ? "bg-blue-600" : "bg-gray-300"
-                } cursor-pointer`}
-                onClick={() => setCurrentIndex(index)}
-              />
-            ))}
-          </div>
-        </div>
+              {/* Text */}
+              <div className="w-full md:w-1/2 text-gray-700">
+                <h2 className="text-2xl md:text-3xl font-bold mb-4 font-serif text-gray-900">
+                  {text.title}
+                </h2>
+                <p className="text-gray-600 leading-relaxed">{text.desc}</p>
+              </div>
+            </motion.div>
+          );
+        })}
       </div>
     </section>
   );
