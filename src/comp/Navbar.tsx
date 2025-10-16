@@ -3,35 +3,35 @@ import BubbleMenu from "@/components/BubbleMenu";
 export default function Navbar() {
   const items = [
     {
-      label: "home",
+      label: "Home",
       href: "/",
       ariaLabel: "Home",
       rotation: -8,
       hoverStyles: { bgColor: "#3b82f6", textColor: "#ffffff" },
     },
     {
-      label: "about",
+      label: "About",
       href: "/about",
       ariaLabel: "About",
       rotation: 8,
       hoverStyles: { bgColor: "#10b981", textColor: "#ffffff" },
     },
     {
-      label: "services",
+      label: "Services",
       href: "/services",
       ariaLabel: "Services",
       rotation: 8,
       hoverStyles: { bgColor: "#f59e0b", textColor: "#ffffff" },
     },
     {
-      label: "gallery",
+      label: "Gallery",
       href: "/gallery",
       ariaLabel: "Gallery",
       rotation: 8,
       hoverStyles: { bgColor: "#ef4444", textColor: "#ffffff" },
     },
     {
-      label: "contact",
+      label: "Contact",
       href: "/contact",
       ariaLabel: "Contact",
       rotation: -8,
