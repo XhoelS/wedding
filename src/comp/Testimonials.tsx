@@ -2,12 +2,12 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const images = [
-  "../../public/weddimg1.jpg",
-  "../../public/weddimg2.jpg",
-  "../../public/weddimg3.jpg",
-  "../../public/weddimg4.jpg",
-  "../../public/weddimg5.jpg",
-  "../../public/weddimg6.jpg",
+  "/public/weddimg1.jpg",
+  "/public/weddimg2.jpg",
+  "/public/weddimg3.jpg",
+  "/public/weddimg4.jpg",
+  "/public/weddimg5.jpg",
+  "/public/weddimg6.jpg",
 ];
 
 export default function Testimonials() {
@@ -17,7 +17,7 @@ export default function Testimonials() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % images.length);
-    }, 3000); // smooth and fast
+    }, 300000); // smooth and fast
     return () => clearInterval(interval);
   }, []);
 
