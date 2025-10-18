@@ -7,35 +7,36 @@ export default function Navbar() {
       href: "/",
       ariaLabel: "Home",
       rotation: -8,
-      hoverStyles: { bgColor: "#3b82f6", textColor: "#ffffff" },
+      hoverStyles: { bgColor: "#3b82f6", textColor: "#bfa76f" },
     },
+
     {
       label: "About",
       href: "/about",
       ariaLabel: "About",
       rotation: 8,
-      hoverStyles: { bgColor: "#10b981", textColor: "#ffffff" },
+      hoverStyles: { bgColor: "#10b981", textColor: "#bfa76f" },
     },
     {
       label: "Services",
       href: "/services",
       ariaLabel: "Services",
       rotation: 8,
-      hoverStyles: { bgColor: "#f59e0b", textColor: "#ffffff" },
+      hoverStyles: { bgColor: "#f59e0b", textColor: "#bfa76f" },
     },
-    {
-      label: "Gallery",
-      href: "/gallery",
-      ariaLabel: "Gallery",
-      rotation: 8,
-      hoverStyles: { bgColor: "#ef4444", textColor: "#ffffff" },
-    },
+    // {
+    //   label: "Gallery",
+    //   href: "/gallery",
+    //   ariaLabel: "Gallery",
+    //   rotation: 8,
+    //   hoverStyles: { bgColor: "#ef4444", textColor: "#bfa76f" },
+    // },
     {
       label: "Contact",
       href: "/contact",
       ariaLabel: "Contact",
       rotation: -8,
-      hoverStyles: { bgColor: "#8b5cf6", textColor: "#ffffff" },
+      hoverStyles: { bgColor: "#8b5cf6", textColor: "#bfa76f" },
     },
   ];
 
@@ -45,14 +46,14 @@ export default function Navbar() {
         <div className="absolute top-0  left-0 w-full  flex items-center space-y-4 ">
           <BubbleMenu
             logo={
-              <a href="/" style={{ fontWeight: 700 }}>
+              <a href="/" style={{ fontWeight: 700, color: "white" }}>
                 Klajd&Fer
               </a>
             }
             items={items}
             menuAriaLabel="Toggle navigation"
-            menuBg="#ffffff"
-            menuContentColor="#111111"
+            menuBg="#bfa76f"
+            menuContentColor="white"
             useFixedPosition={true}
             animationEase="back.out(1.5)"
             animationDuration={0.5}

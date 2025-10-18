@@ -125,7 +125,7 @@ const RollingGallery: React.FC<RollingGalleryProps> = ({
 
   return (
     <div className="relative h-[250px] w-full overflow-hidden">
-      <div
+      {/* <div
         className="absolute top-0 left-0 h-full w-[80px] z-10"
         // style={{
         //   background:
@@ -138,7 +138,7 @@ const RollingGallery: React.FC<RollingGalleryProps> = ({
         //   background:
         //     "linear-gradient(to right, rgba(0,0,0,0) 0%, #060010 100%)",
         // }}
-      />
+      /> */}
       <div className="flex h-full items-center justify-center [perspective:1000px] [transform-style:preserve-3d]">
         <motion.div
           drag="x"
@@ -155,12 +155,12 @@ const RollingGallery: React.FC<RollingGalleryProps> = ({
             width: cylinderWidth,
             transformStyle: "preserve-3d",
           }}
-          className="flex min-h-[200px] cursor-grab items-center justify-center [transform-style:preserve-3d]"
+          className="flex min-h-[100px] cursor-grab items-center justify-center [transform-style:preserve-3d]"
         >
           {galleryImages.map((url, i) => (
             <div
               key={i}
-              className="group absolute flex h-fit items-center justify-center p-[8%] [backface-visibility:hidden] md:p-[6%]"
+              className=" absolute flex h-fit items-center justify-center p-[4%] [backface-visibility:hidden] md:p-[6%]"
               style={{
                 width: `${faceWidth}px`,
                 transform: `rotateY(${

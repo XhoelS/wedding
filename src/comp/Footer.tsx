@@ -22,9 +22,8 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-white text-gray-800 border-t border-gray-200 pt-3">
+    <footer className="bg-white text-gray-800 border-t border-gray-200 py-4">
       <div className="flex justify-between px-4 gap-2">
-        {/* WhatsApp */}
         <div>
           <div
             className="flex items-center gap-2 cursor-pointer"
@@ -36,7 +35,6 @@ export default function Footer() {
             </span>
           </div>
 
-          {/* Instagram */}
           <a
             href={`https://www.instagram.com/${instagramUsername}`}
             target="_blank"
@@ -48,7 +46,6 @@ export default function Footer() {
           </a>
         </div>
         <div>
-          {/* Facebook */}
           <a
             href={facebookUrl}
             target="_blank"
@@ -59,7 +56,6 @@ export default function Footer() {
             <span className="text-gray-700">Facebook</span>
           </a>
 
-          {/* Email */}
           <a
             href={`mailto:${email}`}
             className="flex items-center gap-2 hover:text-[#bfa76f] transition"
@@ -70,7 +66,6 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Footer Text */}
       <p className="text-center text-sm text-gray-500 mt-8">
         &copy; {new Date().getFullYear()}{" "}
         <span className="font-serif text-[#bfa76f]">Klajd&Fer</span>. All rights

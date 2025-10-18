@@ -16,7 +16,7 @@ export default function Testimonials() {
             <img
               src="/weddimg1.jpg"
               alt="Wedding 1"
-              className="w-full h-auto rounded-2xl shadow-lg object-cover"
+              className="w-full h-auto rounded-md shadow-lg object-cover"
             />
           </div>
           <div className="w-1/2 text-gray-700">
@@ -43,7 +43,7 @@ export default function Testimonials() {
             <img
               src="/weddimg2.jpg"
               alt="Wedding 2"
-              className="w-full h-auto rounded-2xl shadow-lg object-cover"
+              className="w-full h-auto rounded-md shadow-lg object-cover"
             />
           </div>
           <div className="w-1/2 text-gray-700">
@@ -69,7 +69,7 @@ export default function Testimonials() {
             <img
               src="/weddimg3.jpg"
               alt="Wedding 3"
-              className="w-full h-auto rounded-2xl shadow-lg object-cover"
+              className="w-full h-auto rounded-md shadow-lg object-cover"
             />
           </div>
           <div className="w-1/2 text-gray-700">
@@ -95,7 +95,7 @@ export default function Testimonials() {
             <img
               src="/weddimg4.jpg"
               alt="Wedding 4"
-              className="w-full h-auto rounded-2xl shadow-lg object-cover"
+              className="w-full h-auto rounded-md shadow-lg object-cover"
             />
           </div>
           <div className="w-1/2 text-gray-700">
@@ -121,7 +121,7 @@ export default function Testimonials() {
             <img
               src="/weddimg5.jpg"
               alt="Wedding 5"
-              className="w-full h-auto rounded-2xl shadow-lg object-cover"
+              className="w-full h-auto rounded-md shadow-lg object-cover"
             />
           </div>
           <div className="w-1/2 text-gray-700">
@@ -136,7 +136,7 @@ export default function Testimonials() {
         </motion.div>
 
         {/* 6 */}
-        <motion.div
+        {/* <motion.div
           className="flex items-center gap-6 flex-row-reverse"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -147,7 +147,7 @@ export default function Testimonials() {
             <img
               src="/weddimg6.jpg"
               alt="Wedding 6"
-              className="w-full h-auto rounded-2xl shadow-lg object-cover"
+              className="w-full h-auto rounded-md shadow-lg object-cover"
             />
           </div>
           <div className="w-1/2 text-gray-700">
@@ -159,7 +159,7 @@ export default function Testimonials() {
               Mauris viverra velit a ex viverra, eget facilisis elit lacinia.
             </p>
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );

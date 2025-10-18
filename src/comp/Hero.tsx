@@ -30,7 +30,7 @@ export default function Hero() {
         </p>
         <a
           href="#contact"
-          className="inline-block bg-white/15 text-brandWhite px-6 py-3 rounded-full font-semibold text-sm sm:text-base shadow-md hover:shadow-xl transition text-amber-50"
+          className="inline-block bg-white/15 text-brandWhite px-6 py-3 rounded-full font-semibold text-sm sm:text-base shadow-md hover:shadow-xl transition text-[#bfa76f]"
         >
           Book Now
         </a>
